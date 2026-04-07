@@ -49,7 +49,7 @@ Open plugin settings in Flow Launcher and configure:
 
 ## Install
 
-1. Put this folder into `%APPDATA%\FlowLauncher\Plugins\LMStudioAssistant`.
+1. Put this folder into `%APPDATA%\FlowLauncher\Plugins\LMStudioAssistant-1.0.0`.
 2. Install dependencies in that folder: `pip install -r requirements.txt`.
 3. Restart Flow Launcher or run `Reload Plugin Data`.
 4. Trigger plugin with `lm`.

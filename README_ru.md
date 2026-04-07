@@ -44,7 +44,7 @@
 
 ## Установка
 
-1. Поместите эту папку в `%APPDATA%\FlowLauncher\Plugins\Window Services-1.1.5`.
+1. Поместите эту папку в `%APPDATA%\FlowLauncher\Plugins\LMStudioAssistant-1.0.0`.
 2. Установите зависимости в этой папке: `pip install -r requirements.txt`.
 3. Перезапустите Flow Launcher или выполните Reload Plugin Data.
 4. Запустите плагин командой `lm`.
