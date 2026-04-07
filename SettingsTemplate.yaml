@@ -1,0 +1,73 @@
+body:
+  - type: textBlock
+    attributes:
+      description: "LM Studio plugin commands: models, load <model>, unload <instance_id>, download <model>, status <job_id>, chat <prompt>."
+
+  - type: input
+    attributes:
+      name: baseUrl
+      label: LM Studio Base URL
+      description: "Local LM Studio API endpoint"
+      defaultValue: "http://localhost:1234"
+
+  - type: passwordBox
+    attributes:
+      name: apiToken
+      label: LM Studio API Token
+      description: "Optional bearer token. Leave empty if auth is disabled."
+      defaultValue: ""
+
+  - type: input
+    attributes:
+      name: defaultModel
+      label: Default model key
+      description: "Used for chat requests if no model is provided in command."
+      defaultValue: ""
+
+  - type: textarea
+    attributes:
+      name: systemPrompt
+      label: System prompt
+      description: "Optional system prompt for chat requests."
+      defaultValue: ""
+
+  - type: input
+    attributes:
+      name: temperature
+      label: Temperature
+      description: "0.0 - 1.0"
+      defaultValue: "0.2"
+
+  - type: input
+    attributes:
+      name: maxOutputTokens
+      label: Max output tokens
+      description: "Leave empty to use LM Studio default."
+      defaultValue: "512"
+
+  - type: dropdown
+    attributes:
+      name: reasoning
+      label: Reasoning level
+      description: "Used only by models that support reasoning setting."
+      defaultValue: "off"
+      options:
+        - "off"
+        - "low"
+        - "medium"
+        - "high"
+        - "on"
+
+  - type: input
+    attributes:
+      name: contextLength
+      label: Context length
+      description: "Leave empty to use model default context window."
+      defaultValue: ""
+
+  - type: input
+    attributes:
+      name: timeoutSeconds
+      label: HTTP timeout (seconds)
+      description: "Timeout for LM Studio API calls."
+      defaultValue: "30"

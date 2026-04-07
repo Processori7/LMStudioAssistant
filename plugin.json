@@ -1,0 +1,13 @@
+{
+  "ID": "6A3C7E8E-B4A4-4D89-8C9C-2C6E7E55F102",
+  "ActionKeyword": "lm",
+  "Name": "LM Studio Assistant",
+  "Description": "Flow Launcher plugin for chatting with and managing models in LM Studio.",
+  "Author": "PorcessorI7",
+  "Version": "1.0.0",
+  "Language": "python",
+  "Website": "https://lmstudio.ai",
+  "ExecuteFileName": "main.py",
+  "IcoPath": "Images\\icon.png",
+  "SearchDelayTime": 400
+}
