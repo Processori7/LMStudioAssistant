@@ -23,7 +23,7 @@ jobs:
         uses: notiz-dev/github-action-json-property@release
         with:
           path: plugin.json
-          prop_name: version
+          prop_path: Version   # ⬅️ именно так, как в JSON
 
       - name: Print version
         run: |
