@@ -26,7 +26,8 @@ jobs:
           prop_name: version
 
       - name: Print version
-        run: echo "Version: ${{ steps.version.outputs.prop }}"
+        run: |
+          echo "Version: ${{ steps.version.outputs.prop }}"
 
       - name: Prepare release files
         run: |
