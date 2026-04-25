@@ -25,7 +25,8 @@ jobs:
           path: plugin.json
           prop_name: version
 
-      - run: echo "Version: ${{ steps.version.outputs.prop }}"
+      - name: Print version
+        run: echo "Version: ${{ steps.version.outputs.prop }}"
 
       - name: Prepare release files
         run: |
