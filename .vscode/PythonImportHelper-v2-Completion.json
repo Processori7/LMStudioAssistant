@@ -1,0 +1,85 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "quote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "FlowLauncher",
+        "importPath": "flowlauncher",
+        "description": "flowlauncher",
+        "isExtraImport": true,
+        "detail": "flowlauncher",
+        "documentation": {}
+    },
+    {
+        "label": "LMStudioPlugin",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class LMStudioPlugin(FlowLauncher):\n    icon_path = \"Images/icon.png\"\n    last_model_key: Optional[str] = None\n    def query(self, query: str) -> List[Dict[str, Any]]:\n        text = (query or \"\").strip()\n        if not text:\n            return self._help_results()\n        command, argument = self._split_query(text)\n        if command in {\"help\", \"?\"}:\n            return self._help_results()",
+        "detail": "main",
+        "documentation": {}
+    }
+]
