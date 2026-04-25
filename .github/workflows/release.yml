@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths-ignore:
       - .github/workflows/*
+
   workflow_dispatch:
 
 jobs:
@@ -12,39 +13,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1. Получаем версию из plugin.json
       - name: Get version
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: 'plugin.json'
-          prop_path: 'version'   # может быть "Version" или "version" — подстрой под твой файл
+          path: plugin.json
+          prop_path: version
 
       - run: echo "Version: ${{ steps.version.outputs.prop }}"
 
-      # 2. Копируем весь репозиторий в release-папку
       - name: Prepare release files
         run: |
           mkdir "LMStudioAssistant-${{ steps.version.outputs.prop }}"
           cp -r ./* "./LMStudioAssistant-${{ steps.version.outputs.prop }}/" 2>/dev/null || true
           cp -r .[!.]* "./LMStudioAssistant-${{ steps.version.outputs.prop }}/" 2>/dev/null || true
 
-      # 3. Убираем .git
       - name: Remove .git
         run: |
           rm -rf "LMStudioAssistant-${{ steps.version.outputs.prop }}/.git"
 
-      # 4. Упаковываем в ZIP
       - name: Create ZIP
         run: |
           cd "LMStudioAssistant-${{ steps.version.outputs.prop }}"
           zip -r "../LMStudioAssistant-${{ steps.version.outputs.prop }}.zip" .
 
-      # 5. Публикуем релиз на GitHub
       - name: Publish Release
         uses: softprops/action-gh-release@v2
         with:
