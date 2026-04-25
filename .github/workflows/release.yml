@@ -23,7 +23,7 @@ jobs:
         uses: notiz-dev/github-action-json-property@release
         with:
           path: plugin.json
-          prop_name: version   # у этого action обычно prop_name, а не prop_path
+          prop_name: version
 
       - run: echo "Version: ${{ steps.version.outputs.prop }}"
 
